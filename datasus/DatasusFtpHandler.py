@@ -50,9 +50,8 @@ class DatasusFtpBaseClass(ABC):
 
 class DatasusNumMedicalBeds(DatasusFtpBaseClass):
    
-   SPECIFIC_FOLDER_PATH: str  # cada subclasse terá seu próprios valores dessas constantes
-   FIRST_2_LETTERS_OF_FILE: str
+   SPECIFIC_FOLDER_PATH: str =  # cada subclasse terá seu próprios valores dessas constantes
+   FIRST_2_LETTERS_OF_FILE: str =
 
-   def __init__(self, specific_folder_path: str, first_2_letters_of_file: str) -> None:
-         self.specific_folder_path = specific_folder_path
-         self.first_2_letters_of_file = first_2_letters_of_file
+   def extract_raw_data() -> pd.DataFrame | list[pd.DataFrame]:
+      pass
